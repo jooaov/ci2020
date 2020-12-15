@@ -1,10 +1,11 @@
-name: CI
 on:
   pull_request:
-    branches:[main]
+    branches:
+      - master
 
-  jobs:
-    build:
+jobs:
+  build:
     runs-on: ubuntu-20.04
     steps:
-      -run:ls - la
+      - name: checkout project
+        uses: actions/checkout@v2
